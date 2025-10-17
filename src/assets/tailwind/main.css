@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* Define your custom theme using @theme */
+@theme {
+    --color-beige-500: #BCAB89;
+    --color-beige-600: #8A7E65;
+    --color-blue-500: #4A6A77;
+    --color-blue-400: #469097;
+    --color-blue-300: #73BFC6;
+    --color-neutral-650: #444444;
+
+    --font-title: "Labrada", serif;
+    --font-text: "Inter", sans-serif;
+
+    --ease-out-spring: linear(
+            0, 0.009, 0.035 2.1%, 0.141, 0.281 6.7%, 0.723 12.9%, 0.938 16.7%, 1.017,
+            1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%,
+            1.051 39.6%, 1.017 43.1%, 0.991, 0.977 51%, 0.974 53.8%, 0.975 57.1%,
+            0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1
+    );
+    --ease-out-elastic: linear(
+            0, 0.218 2.1%, 0.862 6.5%, 1.114, 1.296 10.7%, 1.346, 1.37 12.9%, 1.373,
+            1.364 14.5%, 1.315 16.2%, 1.032 21.8%, 0.941 24%, 0.891 25.9%, 0.877,
+            0.869 27.8%, 0.87, 0.882 30.7%, 0.907 32.4%, 0.981 36.4%, 1.012 38.3%, 1.036,
+            1.046 42.7% 44.1%, 1.042 45.7%, 0.996 53.3%, 0.988, 0.984 57.5%, 0.985 60.7%,
+            1.001 68.1%, 1.006 72.2%, 0.998 86.7%, 1
+    );
+    --shadow-subtle: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    --shadow-regular: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    --drop-shadow-strong:0px 0px 20px rgba(0, 0, 0, 0.5);
+    --shadow-inset: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    --breakpoint-xs: 30rem;
+
+    /*--breakpoint-*: initial;*/
+    /*--breakpoint-xsm: 481px; !* Starts after old xsm max-width *!*/
+    /*--breakpoint-sm: 640px;  !* Starts after old sm max-width *!*/
+    /*--breakpoint-md: 768px;  !* Starts after old md max-width *!*/
+    /*--breakpoint-lg: 1024px; !* Starts after old lg max-width *!*/
+    /*--breakpoint-xl: 1280px; !* Starts after old xl max-width *!*/
+}
+@utility animation-duration-* {
+    animation-duration: calc(--value(integer) * 1ms);
+}
+body {
+    @apply text-justify leading-[1.5em] text-3xl max-lg:text-2xl max-md:text-lg max-sm:text-sm text-neutral-650 font-bold font-title bg-zinc-300;
+}
+
+@utility container {
+    padding-inline: 10px;
+    margin-inline: auto;
+}
+@utility plus-* {
+    width: calc(var(--spacing) * --value(integer));
+    height: calc(var(--spacing) * --value(integer));
+    @apply relative;
+    @variant before{
+        height: 1px;
+        height: calc(--modifier(integer) * 1px);
+        @apply w-full bg-current absolute top-0 bottom-0 m-auto;
+    }
+    @variant after{
+        height: 1px;
+        height: calc(--modifier(integer) * 1px);
+        @apply w-full bg-current absolute top-0 bottom-0 m-auto rotate-90;
+    }
+}
+@utility minus-* {
+    width: calc(var(--spacing) * --value(integer));
+    height: calc(var(--spacing) * --value(integer));
+    @apply relative;
+    @variant before{
+        height: 1px;
+        height: calc(--modifier(integer) * 1px);
+        @apply w-full bg-current absolute top-0 bottom-0 m-auto;
+    }
+}
+
+@utility cross-* {
+    width: calc(var(--spacing) * --value(integer));
+    height: calc(var(--spacing) * --value(integer));
+    @apply relative;
+    @variant before{
+        width: calc(var(--spacing) * --value(integer) * 1.41421);
+        height: 1px;
+        height: calc(--modifier(integer) * 1px);
+        @apply bg-current absolute left-1/2 top-0 bottom-0 m-auto -translate-x-1/2 rotate-45;
+    }
+    @variant after{
+        width: calc(var(--spacing) * --value(integer) * 1.41421);
+        height: 1px;
+        height: calc(--modifier(integer) * 1px);
+        @apply bg-current absolute left-1/2 top-0 bottom-0 m-auto -translate-x-1/2 rotate-135;
+    }
+}
+@utility font-outline-* {
+    -webkit-text-stroke-width: calc(--value(number) * 1em / 16 / 4);
+    -webkit-text-stroke-color: --value(--color-*);
+}
+
+@layer base{
+
+    body:has(.modal-open) {
+        @apply overflow-hidden;
+    }
+}
+@font-face {
+    font-family: "Labrada";
+    src: url("../fonts/Labrada/Labrada-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+
+}
+
