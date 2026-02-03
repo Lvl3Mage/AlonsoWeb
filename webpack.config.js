@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FontAwesomeAutoImportPlugin = require('./fa-auto-import');
 let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
     mode = 'production'
@@ -76,7 +77,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader", "postcss-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -119,5 +120,6 @@ module.exports = {
                     filename: `./${page}`
                 })
         ),
+        new FontAwesomeAutoImportPlugin({ rootDir: './src' }),
     ],
 }

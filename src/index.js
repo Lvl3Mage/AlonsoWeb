@@ -2,12 +2,6 @@ import $ from "jquery";
 // JS
 import './js/main.js'
 
-//FA
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
-
-
+import "virtual-fontawesome-auto"
 // CSS
 import './assets/tailwind/main.css'
