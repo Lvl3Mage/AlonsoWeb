@@ -7,25 +7,46 @@
 		<img class="w-full" src="../assets/images/Portrait/EditTopVert.png" alt="Banner Image">
 	</div>
 	<div class="absolute top-0 left-0 w-full h-full md:pb-[10%] sm:pb-[30%] max-sm:h-full pb-[20%] py-5">
-		<div class="container h-full">
-			<div class="grid grid-cols-2 grid-rows-1 max-md:grid-cols-1 max-md:grid-rows:2 h-full items-center justify-items-center gap-8">
-				<div class="grid w-full h-full resize items-center justify-center max-md:max-w-96 ">
-					<div class="aspect-square rounded-full w-full max-h-full overflow-hidden">
-						<img src="../assets/images/Logos/FotoPaTodo.jpg" alt="Main Profile Picture"
-						     class="h-full w-full object-cover">
-					</div>
-				</div>
-				<div class=" font-title">
-					<div class="text-7xl max-lg:text-6xl max-md:text-7xl max-xs:text-4xl max-xs:text-center text-blue-300 font-outline-2 font-outline-black font-bold mb-4 max-md:mb-8">
-						ALONSO <br>
-						MADRIGAL <br>
-						HERNÁNDEZ
-					</div>
-					<div class="text-4xl max-lg:text-3xl max-md:text-4xl max-xs:text-2xl max-xs:text-center text-blue-400 font-outline-3 font-outline-black font-[900] tracking-tight">
-						NARRATIVE DESIGNER <br> AND PROGRAMMER
-					</div>
-				</div>
+		<div class="flex items-center h-full relative">
+			<div class="absolute w-full h-full hidden to-transparent z-0 md:flex flex-col">
+				<div class="bg-gradient-to-b from-transparent to-black/70 grow"></div>
+				<div class="bg-black/70 basis-1/2"></div>
+				<div class="bg-gradient-to-b from-black/70 to-transparent grow"></div>
 			</div>
+			<div class="absolute w-full h-full to-transparent z-0 flex md:hidden  flex-col">
+				<div class="bg-gradient-to-b from-transparent to-black/60 grow"></div>
+				<div class="bg-black/60 basis-1/2"></div>
+				<div class="bg-gradient-to-b from-black/60 to-transparent basis-10"></div>
+			</div>
+			<div class=" grow max-h-full relative z-10">
+				<div class="container">
+					<div class="grid grid-cols-[auto_auto] grid-rows-1 max-md:grid-cols-1 max-md:grid-rows-2 h-full md:items-center gap-8">
+						<div class="w-full flex justify-center items-center md:justify-center ">
+							<div class="max-md:px-10 max-md:max-w-96 md:w-auto md:h-80 lg:h-90 xl:h-110">
+								<div class="aspect-square rounded-full w-full max-h-full overflow-hidden">
+									<img src="../assets/images/Logos/FotoPaTodo.jpg" alt="Main Profile Picture"
+									     class="h-full w-full object-cover">
+								</div>
+							</div>
+						</div>
+						<div class="flex justify-center md:justify-center items-center ">
+							<div class="font-title">
+								<div class="text-7xl max-lg:text-6xl max-md:text-7xl max-sm:text-4xl max-sm:text-center text-blue-300 font-outline-2 font-outline-black  drop-shadow-[0_0_1px_#FFF6] font-bold mb-4 max-md:mb-8">
+									ALONSO <br>
+									MADRIGAL <br>
+									HERNÁNDEZ
+								</div>
+								<div class="text-4xl max-lg:text-3xl max-md:text-4xl max-sm:text-2xl max-sm:text-center text-blue-300 font-outline-2 font-outline-black  drop-shadow-[0_0_1px_#FFF6]  font-[800] tracking-normal">
+									NARRATIVE DESIGNER <br> AND PROGRAMMER
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
 		</div>
 
 	</div>
@@ -33,7 +54,7 @@
 <section class="relative  overflow-hidden  mb-8 pb-8 border-beige-500 border-b-2">
 	<div class="container">
 
-		<div class="text-blue-500 font-title text-8xl max-lg:text-6xl max-md:text-5xl max-sm:text-4xl font-bold text-center">
+		<div class="text-blue-500 font-title text-8xl max-lg:text-6xl max-md:text-5xl max-sm:text-4xl font-bold text-center mb-8">
 			ABOUT ME
 		</div>
 		<div class="flex flex-col xs:pr-[33%] 2xl:pr-[10%] items-center">
